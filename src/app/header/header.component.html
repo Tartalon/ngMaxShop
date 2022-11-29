@@ -1,12 +1,46 @@
-<nav class="
-  relative
-  w-full
-  flex
-  flex-wrap
-  items-center
-  justify-between
-  py-4
-  bg-gray-100
-  navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid w-full"></div>
-</nav>
+<header class="header bg-gray-100">
+  <div class="container-fluid mx-auto px-4 py-4">
+    <nav class="navbar flex justify-between">
+      <div class="navbar-left flex items-center">
+        <a
+          href="#"
+          class="navbar__brand text-lg font-semibold text-gray-600 mr-6"
+          >Recipe Book</a
+        >
+        <ul class="navbar__list flex">
+          <li class="navbar__item mr-6">
+            <a
+              href="#"
+              class="navbar__link text-gray-500 font-medium hover:text-gray-900"
+              >Recipes</a
+            >
+          </li>
+          <li class="navbar__item mr-6">
+            <a
+              href="#"
+              class="navbar__link text-gray-500 font-medium hover:text-gray-900"
+              >Shopping List</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="navbar__dropdown dropdown relative">
+        <a
+          href="#"
+          role="button"
+          class="dropdawn-toggle text-gray-600 font-medium hover:text-gray-900 flex relative pr-4"
+          >Manage <span class="dropdown__caret absolute right-0 bottom-2"></span
+        ></a>
+        <ul class="dropdown__menu hidden">
+          <li class="dropdown__item mb-2">
+            <a href="#" class="dropdown__link flex">Save Data</a>
+          </li>
+          <li class="dropdown__item">
+            <a href="#" class="dropdown__link flex">Fetch Data</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+

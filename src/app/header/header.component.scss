@@ -1,0 +1,10 @@
+.dropdown {
+  &__caret {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-left: 3px solid gray;
+    border-bottom: 3px solid gray;
+    transform: rotate(-45deg);
+  }
+}
