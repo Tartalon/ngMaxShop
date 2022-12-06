@@ -1,1 +1,15 @@
-<p>shopping-list works!</p>
+<div class="shop-list grid sm:grid-cols-12 container gap-8">
+  <div class="sm:col-span-10">
+    <app-shopping-edit></app-shopping-edit>
+    <hr />
+    <ul class="shop-list__list flex flex-col mt-5">
+      <a
+        class="shop-list__item border px-2 py-4"
+        href="#"
+        style="cursor: pointer"
+        *ngFor="let ingredient of ingredients"
+        >{{ ingredient.name }} ({{ ingredient.amount }})</a
+      >
+    </ul>
+  </div>
+</div>

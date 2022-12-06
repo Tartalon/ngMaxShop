@@ -6,9 +6,9 @@
     New Recipe
   </button>
   <hr />
-  <div class="flex mt-4">
+  <div class="w-full flex flex-col mt-4">
     <a
-      class="flex flex-col md:flex-row p-3 md:max-w-xl rounded-lg bg-white shadow-lg"
+      class="flex flex-col mb-5 md:flex-row p-3 w-full rounded-lg bg-white shadow-lg justify-between"
       href="#"
       *ngFor="let recipe of recipes"
     >
@@ -21,7 +21,7 @@
         </p>
       </div>
       <img
-        class="self-center w-full h-14 w-14 object-cover rounded-lg"
+        class="self-center h-14 w-14 object-cover rounded-lg"
         [src]="recipe.imagePath"
         alt="{{ recipe.name }}"
       />
