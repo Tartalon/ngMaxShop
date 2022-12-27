@@ -6,26 +6,6 @@
     New Recipe
   </button>
   <hr />
-  <div class="w-full flex flex-col mt-4">
-    <a
-      class="flex flex-col mb-5 md:flex-row p-3 w-full rounded-lg bg-white shadow-lg justify-between"
-      href="#"
-      *ngFor="let recipe of recipes"
-    >
-      <div class="px-6 flex flex-col">
-        <h5 class="text-gray-900 text-xl font-medium mb-2">
-          {{ recipe.name }}
-        </h5>
-        <p class="text-gray-700 text-base mb-4">
-          {{ recipe.description }}
-        </p>
-      </div>
-      <img
-        class="self-center h-14 w-14 object-cover rounded-lg"
-        [src]="recipe.imagePath"
-        alt="{{ recipe.name }}"
-      />
-    </a>
-  </div>
+  <div class="w-full flex flex-col mt-4"></div>
 </div>
-<app-recipe-item></app-recipe-item>
+<app-recipe-item *ngFor="let recipe of recipes"></app-recipe-item>
