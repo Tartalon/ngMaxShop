@@ -1,8 +1,12 @@
 <div class="detail__img-box">
-  <img src="" alt="" class="detail__img" />
+  <img
+    [src]="recipe.imagePath"
+    alt="{{ recipe.name }}"
+    class="detail__img max-h-80"
+  />
 </div>
 <div class="detail__recipe-name-box mb-2">
-  <h1 class="detail__recipe-name text-3xl font-semibold">Recipe Name</h1>
+  <h1 class="detail__recipe-name text-3xl font-semibold">{{ recipe.name }}</h1>
 </div>
 <div class="detail__buttons-box">
   <div>
@@ -45,7 +49,7 @@
   </div>
 </div>
 <div class="detail__description">
-  <p>Description</p>
+  <p>{{ recipe.description }}</p>
 </div>
 <div class="detail__ingredients">
   <p>Ingredients</p>

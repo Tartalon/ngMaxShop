@@ -15,7 +15,7 @@ export class RecipeListComponent implements OnInit {
       'https://www.humnutrition.com/blog/wp-content/uploads/2020/01/are-air-fryers-healthy.jpg.webp'
     ),
     new Recipe(
-      'A test Recipe',
+      'Another test Recipe',
       'This is simply a test',
       'https://www.humnutrition.com/blog/wp-content/uploads/2020/01/are-air-fryers-healthy.jpg.webp'
     ),
