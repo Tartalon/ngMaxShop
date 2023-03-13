@@ -10,17 +10,17 @@
         <ul class="navbar__list flex">
           <li class="navbar__item mr-6">
             <a
-              href="#"
               class="navbar__link text-gray-500 font-medium hover:text-gray-900"
-              (click)="onSelect('recipe')"
+              routerLinkActive="text-gray-900"
+              routerLink="/recipes"
               >Recipes</a
             >
           </li>
           <li class="navbar__item mr-6">
             <a
-              href="#"
               class="navbar__link text-gray-500 font-medium hover:text-gray-900"
-              (click)="onSelect('shopping-list')"
+              routerLinkActive="text-gray-900"
+              routerLink="/shopping-list"
               >Shopping List</a
             >
           </li>
@@ -28,17 +28,24 @@
       </div>
       <div class="navbar__dropdown dropdown relative">
         <a
-          href="#"
           role="button"
-          class="dropdawn-toggle text-gray-600 font-medium hover:text-gray-900 flex relative pr-4"
+          class="dropdawn-toggle text-gray-600 font-medium hover:text-gray-900 flex relative pr-4 cursor-pointer"
+          (click)="onDropdown()"
           >Manage <span class="dropdown__caret absolute right-0 bottom-2"></span
         ></a>
-        <ul class="dropdown__menu hidden">
+        <ul
+          class="dropdown__menu absolute bg-gray-100 rounded px-3 pt-3 -left-4 min-w-max"
+          [class.hidden]="hidden"
+        >
           <li class="dropdown__item mb-2">
-            <a href="#" class="dropdown__link flex">Save Data</a>
+            <a class="dropdown__link flex hover:text-gray-500 cursor-pointer"
+              >Save Data</a
+            >
           </li>
           <li class="dropdown__item">
-            <a href="#" class="dropdown__link flex">Fetch Data</a>
+            <a class="dropdown__link flex hover:text-gray-500 cursor-pointer"
+              >Fetch Data</a
+            >
           </li>
         </ul>
       </div>

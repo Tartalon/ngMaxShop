@@ -9,7 +9,7 @@
   <div class="w-full flex flex-col mt-4"></div>
 </div>
 <app-recipe-item
-  *ngFor="let recipeEl of recipes"
+  *ngFor="let recipeEl of recipes; let i = index"
   [recipe]="recipeEl"
-  (resipeSelected)="onRecipeSelected(recipeEl)"
+  [index]="i"
 ></app-recipe-item>

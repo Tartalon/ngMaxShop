@@ -1,7 +1,8 @@
 <a
-  class="flex flex-col mb-5 md:flex-row p-3 w-full rounded-lg bg-white shadow-lg justify-between"
-  href="#"
-  (click)="onSelected()"
+  style="cursor: pointer"
+  [routerLink]="[index]"
+  routerLinkActive="bg-slate-200"
+  class="flex flex-col mb-5 md:flex-row p-3 w-full rounded-lg bg-white shadow-lg justify-between hover:bg-slate-200"
 >
   <div class="px-6 flex flex-col">
     <h5 class="text-gray-900 text-xl font-medium mb-2">

@@ -10,10 +10,11 @@
 </div>
 <div class="detail__buttons-box">
   <div>
-    <div class="ditail__buttons-wrapper dropdown relative">
+    <div class="ditail__buttons-wrapper dropdown relative" appDropdown>
       <button
         class="ditail__buttons dropdown-toggle px-6 py-2.5 bg-blue-600 text-white font-medium text-xs liading-tight rounded shadow-md hover:bg-blue-700 focus:bg-blue-700 focus:shadow-lg focus:outline-none transition duration-250 linier flex items-center"
         type="button"
+        (click)="onDropdown()"
       >
         Manage Recipe
         <svg
@@ -33,16 +34,30 @@
         </svg>
       </button>
       <ul
-        class="dropdown__buttons-list dropdown-menu hidden bg-white text-base index-5 list-none text-left rounded-lg mt-1"
+        class="dropdown__buttons-list dropdown-menu text-base index-5 list-none text-left rounded-lg mt-1 absolute pt-3 min-w-max px-3 shadow bg-gray-100"
+        [class.hidden]="hidden"
       >
         <li class="dropdown__buttons-item">
-          <a href="#" class="dropdown__buttons-link">To Shopping List</a>
+          <a
+            (click)="onAddToShoppingList()"
+            style="cursor: pointer"
+            class="dropdown__buttons-link hover:text-gray-500"
+            >To Shopping List</a
+          >
         </li>
         <li class="dropdown__buttons-item">
-          <a href="#" class="dropdown__buttons-link">Edit Recipe</a>
+          <a
+            style="cursor: pointer"
+            class="dropdown__buttons-link hover:text-gray-500"
+            >Edit Recipe</a
+          >
         </li>
         <li class="dropdown__buttons-item">
-          <a href="#" class="dropdown__buttons-link">Delete Recipe</a>
+          <a
+            style="cursor: pointer"
+            class="dropdown__buttons-link hover:text-gray-500"
+            >Delete Recipe</a
+          >
         </li>
       </ul>
     </div>
@@ -52,5 +67,9 @@
   <p>{{ recipe.description }}</p>
 </div>
 <div class="detail__ingredients">
-  <p>Ingredients</p>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+      {{ ingredient.name }} - {{ ingredient.amount }}
+    </li>
+  </ul>
 </div>

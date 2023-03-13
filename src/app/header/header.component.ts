@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+// import { DropdownDirective } from '../shared/dropdown.directive';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  @Output() featureSelected = new EventEmitter<string>();
+  hidden = true;
 
-  onSelect(feature: string) {
-    this.featureSelected.emit(feature);
+  onDropdown() {
+    this.hidden = !this.hidden;
   }
 }
