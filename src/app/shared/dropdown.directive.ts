@@ -8,6 +8,5 @@ export class DropdownDirective {
 
   @HostListener('click', ['$event']) toggleOpen(event: Event) {
     this.isOpen = !this.isOpen;
-    console.log(event.target);
   }
 }
