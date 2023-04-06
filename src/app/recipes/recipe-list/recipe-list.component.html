@@ -1,16 +1,15 @@
-<div class="recipe-btn__box">
-  <button
-    type="button"
-    (click)="onNewRecipe()"
-    class="inline-block mb-4 px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-250 ease-in-out"
-  >
-    New Recipe
-  </button>
-  <hr />
-  <div class="w-full flex flex-col mt-4"></div>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
+  </div>
 </div>
-<app-recipe-item
-  *ngFor="let recipeEl of recipes; let i = index"
-  [recipe]="recipeEl"
-  [index]="i"
-></app-recipe-item>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <app-recipe-item
+      *ngFor="let recipeEl of recipes; let i = index"
+      [recipe]="recipeEl"
+      [index]="i"></app-recipe-item>
+  </div>
+</div>
+

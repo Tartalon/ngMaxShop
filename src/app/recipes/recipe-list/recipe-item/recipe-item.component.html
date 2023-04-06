@@ -1,20 +1,17 @@
 <a
-  style="cursor: pointer"
+  style="cursor: pointer;"
   [routerLink]="[index]"
-  routerLinkActive="bg-slate-200"
-  class="flex flex-col mb-5 md:flex-row p-3 w-full rounded-lg bg-white shadow-lg justify-between hover:bg-slate-200"
->
-  <div class="px-6 flex flex-col">
-    <h5 class="text-gray-900 text-xl font-medium mb-2">
-      {{ recipe.name }}
-    </h5>
-    <p class="text-gray-700 text-base mb-4">
-      {{ recipe.description }}
-    </p>
+  routerLinkActive="active"
+  class="list-group-item clearfix">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text">{{ recipe.description }}</p>
   </div>
-  <img
-    class="self-center h-14 w-14 object-cover rounded-lg"
-    [src]="recipe.imagePath"
-    alt="{{ recipe.name }}"
-  />
+  <span class="pull-right">
+        <img
+          [src]="recipe.imagePath"
+          alt="{{ recipe.name }}"
+          class="img-responsive"
+          style="max-height: 50px;">
+      </span>
 </a>

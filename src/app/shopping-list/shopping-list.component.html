@@ -1,15 +1,16 @@
-<div class="shop-list grid sm:grid-cols-12 gap-8">
-  <div class="sm:col-span-10">
-    <app-shopping-edit> </app-shopping-edit>
+<div class="row">
+  <div class="col-xs-10">
+    <app-shopping-edit></app-shopping-edit>
     <hr />
-    <ul class="shop-list__list flex flex-col mt-5">
+    <ul class="list-group">
       <a
-        class="shop-list__item border px-2 py-4"
-        href="#"
+        class="list-group-item"
         style="cursor: pointer"
-        *ngFor="let ingredient of ingredients"
-        >{{ ingredient.name }} ({{ ingredient.amount }})</a
+        *ngFor="let ingredient of ingredients; let i = index"
+        (click)="onEditItem(i)"
       >
+        {{ ingredient.name }} ({{ ingredient.amount }})
+      </a>
     </ul>
   </div>
 </div>
